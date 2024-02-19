@@ -32,9 +32,15 @@ createApp({
     methods: {
         prevSlide() {
             this.activeIndex--;
+            if(this.activeIndex < 0) {
+                this.activeIndex = this.slides.image.length - 1;
+            }
         },
         nextSlide() {
             this.activeIndex++;
+            if(this.activeIndex >= this.slides.image.length) {
+                this.activeIndex = 0;
+            }
         },
     },
 }).mount('#app');
