@@ -17,13 +17,13 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img v-for="currentImage in slides.image" src="img/01.webp" alt="Spiderman" />
+                    <img v-for="(currentImage, index) in slides.image" :src="currentImage" alt="Spiderman" v-show="index == activeIndex"/>
                     <div class="text">
                         <h3>
-                            {{ slides.title[0] }}
+                            {{ slides.title }}
                         </h3>
                         <p>
-                            {{ slides.text[0] }}
+                            {{ slides.text }}
                         </p>
                     </div>
                 </div>
