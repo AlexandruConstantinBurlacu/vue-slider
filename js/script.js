@@ -29,4 +29,12 @@ createApp({
             }
         }
     },
+    methods: {
+        prevSlide() {
+            this.activeIndex--;
+        },
+        nextSlide() {
+            this.activeIndex++;
+        },
+    },
 }).mount('#app');
